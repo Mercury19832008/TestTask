@@ -1,0 +1,40 @@
+1. переключаемся у себя на jdk 1.8 
+2. импортируем проект в идею
+3. идем в св-ва проекта (F4)
+4. Project-Project language level = 8.0 lyambdas, type, annotations
+
+5. Modules - licensing-web-web
+добавляем три плагина:
+Web
+Spring
+Wicket
+
+6. OK
+
+7. Run-Edit configurations - новый Maven проект создаем
+8. Working directory = 
+D:\MC\Force\Tasks\Task1\Elar\TestTask\web
+
+
+9. command line = 
+clean jetty:run-exploded -Dmaven.test.skip=true
+
+10. Maven Goal = 
+добавляем 
+D:/MC/Force/Tasks/Task1/Elar/TestTask/core
+install
+
+11. На вкладках General и Runner  используем галку Use project settings
+
+
+12. OK
+
+можно жать на дебаг для созданного проекта
+
+
+
+Примечание: 
+описание постгресс БД находится тут : 
+D:\MC\Force\Tasks\Task1\Elar\TestTask\web\src\main\webapp\WEB-INF\jetty-env.xml
+
+

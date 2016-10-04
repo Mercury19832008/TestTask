@@ -1,0 +1,467 @@
+/* !
+ * 0. Other
+ * 1. Header
+ * 2. Main menu
+ * 3. Left menu
+ * 4. Footer
+ * 5. Index page
+ * 6. Reestr page
+ * 7. Login page
+*/
+
+
+/*  ==================================================
+    0. Other
+    ================================================== */
+
+/* модальные окна. временно для показа */
+h3.w_captionText {
+    line-height: normal;
+    font-size: 13px;
+}
+
+/* Цвета для фона*/
+
+.bg-red {
+    background-color: #e7505a;
+}
+
+.bg-blue {
+    background-color: #3598dc;
+}
+
+.bg-maroon {
+    background-color: #32c5d2;
+}
+
+
+/* Различные отступы*/
+
+.mrgn-top {
+    margin-top: 30px;
+}
+
+.mrgn-top-10 {
+    margin-top: 10px;
+}
+
+.mrgn-top-20 {
+    margin-top: 20px;
+}
+
+.mrgn-top-25 {
+    margin-top: 25px;
+}
+
+.mrgn-btm-10 {
+    margin-bottom: 10px;
+}
+
+.mrgn-btm-20 {
+    margin-bottom: 20px;
+}
+
+.mrgn-btm-30 {
+    margin-bottom: 30px;
+}
+
+.mrgn-btm-70 {
+    margin-bottom: 70px;
+}
+
+.break-line {
+    height: 1px;
+    margin: 15px 0;
+    overflow: hidden;
+    background-color: #e5e5e5;
+    
+}
+
+
+
+/* Заголовок страницы */
+
+.page-title {
+    margin-top: -25px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Стили календаря */
+input.hasDatepicker {
+    display: inline-block !important;
+}
+
+input.hasTimepicker {
+    display: inline-block;
+}
+
+/* К формам */
+.form-label {
+    margin-top: 6px;
+}
+
+.ch-input {
+    margin-right: 5px !important;
+}
+
+
+/* К таблицам */
+
+#table-wrapper {
+    padding-bottom: 0;
+}
+
+.table {
+    margin-bottom: 0px;
+}
+
+.table-bordered-custom th:not(:last-child),
+.table-bordered-custom td:not(:last-child) {
+    border-right: 1px solid #dddddd;
+}
+
+th span p {
+    margin: 0;
+}
+
+.wicket_orderUp p:after,
+.wicket_orderDown p:after {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    margin-left: 2px;
+}
+
+.wicket_orderUp p:after {
+    content: "\f0de";
+}
+
+.wicket_orderDown p:after {
+    content: "\f0dd";
+}
+
+
+
+/*  ==================================================
+    1. Header
+    ================================================== */
+
+.header-main,
+.header-username {
+    margin-top: 15px;
+}
+
+.header-messages {
+    margin-top: 21px;
+}
+
+.header-messages span {
+    margin-left: 10px;
+}
+
+.username h3 {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.role h4 {
+    font-size: 13px;
+    color: #868686;
+    margin: 0;
+}
+
+.userpic {
+    margin-top: 3px;
+    margin-left: 25px;
+}
+
+.userpic img {
+    width: 56px;
+    height: 56px;
+}
+
+.header-lk {
+    margin-top: 10px;
+}
+
+
+.fa-angle-down.active:before {
+    content: "\f106";
+}
+
+.dropdown-menu li p {
+    padding: 3px 20px;
+    min-height: 0;
+    margin: 0;
+}
+
+/*  ==================================================
+    2. Main menu
+    ================================================== */
+
+.main-menu * {
+    margin: 0;
+    padding: 0;
+}
+
+.main-menu {
+    color: #777777
+    margin-top: 15px;
+}
+
+.first-menu {
+    float: left;
+}
+
+.first-menu a,
+.second-menu a {
+    display: block;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    color: #777;
+    font-size: 16px;
+    margin-left: 17px;
+    margin-right: 17px;
+}
+
+.first-menu a:hover,
+.second-menu a:hover {
+    color: #5e5e5e;
+    text-decoration: none;
+}
+
+.second-menu {
+    float: right;
+}
+
+
+/*  ==================================================
+    3. Left menu
+    ================================================== */
+
+.left-menu {
+    background-color: #FDFDFD;
+    padding: 5px 0;
+    border-radius: 5px;
+}
+
+.left-menu-title {
+    margin-left: 6px;
+}
+
+.left-menu-title i {
+    font-size: 15px;
+    margin-right: 5px;
+}
+
+.left-menu-title span {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.left-menu ul li a {
+    display: block;
+    color: #383838;
+    font-size: 15px;
+    padding-left: 30px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+}
+
+.left-menu ul li a:hover {
+    background-color: #f2f2f2;
+    color: #004573;
+    text-decoration: none;
+}
+
+
+/*  ==================================================
+    4. Footer
+    ================================================== */
+
+
+/* Принудительно окрашивает плашку футера */
+
+#footer {
+    background-color: #f8f8f8;
+    border-color: #e7e7e7;
+}
+
+.footer {
+    background-color: #f8f8f8;
+    border-color: #e7e7e7;
+    padding-top: 10px;
+    padding-bottom: 5px;
+}
+
+.footer-menu a {
+    display: block;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    margin-left: 7px;
+    margin-right: 7px;
+    color: #777777;
+}
+
+.footer-menu a:hover {
+    color: #5e5e5e;
+    text-decoration: none;
+}
+
+.footer-phone {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+/*  ==================================================
+    5. Index page
+    ================================================== */
+
+
+/* Заголовки панелей */
+
+.title-filter {
+    background-color: #01718D;
+    padding: 7px;
+    padding-left: 10px;
+    color: #fff;
+    font-size: 15px;
+}
+
+
+/* Выбор периода */
+
+.form-line {
+    margin-top: 15px;
+}
+
+.datestart {
+    margin-left: 72px;
+}
+
+.input-title {
+    float: left;
+    margin-right: 15px;
+    font-size: 15px;
+    line-height: 2;
+}
+
+
+/* Панели периода */
+
+.body-filter {
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 15px;
+    margin-top: 20px;
+}
+
+.body-filter:last-child {
+    margin-top: 29px;
+}
+
+
+/* Цветные панели статистики */
+
+.item-stat {
+    border-radius: 3px;
+    color: #fff;
+    padding-right: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    position: relative;
+    overflow: hidden;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+
+/* Фоновые иконки на панелях */
+
+.item-stat i {
+    position: absolute;
+    bottom: -20px;
+    left: -20px;
+    font-size: 100px;
+    color: rgba(255, 255, 255, 0.2);
+}
+
+.number {
+    font-size: 36px;
+    margin-bottom: -10px;
+}
+
+.summary-title {
+    font-size: 16px;
+    font-weight: 300;
+}
+
+
+/*  ==================================================
+    6. Reestr page
+    ================================================== */
+
+.fulltext-search-bg {
+    background-color: #E3F2FD;
+    padding: 10px;
+}
+
+.fulltext-search-btn button {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.advanced-search-title {
+    line-height: 2.5;
+}
+
+.advanced-search-button button {
+    margin-left: 15px;
+}
+
+.single-search-title {
+    font-weight: bolder;
+    line-height: 2.5;
+}
+
+.page-item {
+    margin-top: 20px;
+}
+
+.view-num,
+.view-select,
+.view-comm {
+    float: left;
+    margin-left: 10px;
+    line-height: 2.5;
+}
+
+/*  ==================================================
+    7. Login page
+    ================================================== */
+
+
+/*  Фон во всю ширину экрана.
+    ==================================================*/
+
+/*
+.login-page {
+    background-color: #e8e8e8;
+    background-image: url(../images/login-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: auto;
+    -webkit-background-size: auto;
+    -o-background-size: auto;
+    -moz-background-size: auto;
+}
+*/
+
+
+.feedbackPanel .feedbackPanelERROR {
+    color: #F00;
+}

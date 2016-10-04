@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:wicket="http://wicket.apache.org">
+<!-- java client version ${project.version} -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <link rel="stylesheet" href="css/sb-admin-2.css">
+    <link rel="stylesheet" href="plugins/datepicker/css/bootstrap-datetimepicker.min.css">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.min.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+<div class="ext-el-mask-msg" id="ajax-indicator">
+    <div><wicket:message key="loading"/></div>
+</div>
+
+<script type="text/javascript">
+    try {
+        if (Wicket && Wicket.Window)
+            Wicket.Window.unloadConfirmation = false;
+    } catch (e) {
+    }
+    var oldWicketShow = Wicket.showIncrementally;
+    var oldWicketHide = Wicket.hideIncrementally;
+//    $.blockUI.defaults.css = {};
+//    $.blockUI.defaults.overlayCSS = {cursor: 'default'};
+    Wicket.showIncrementally = function (id) {
+        if (id == "ajax-indicator") {
+            if (!document.getElementById('ajax-indicator')) {
+                $('body').append("<div class='ext-el-mask-msg x-mask-loading' id='ajax-indicator' style='position:absolute;display:none;margin:10px 15px;width:100px;'><div>Загрузка...</div></div>");
+            }
+            $.blockUI({
+                centerY: 0,
+                css: {top: '10px', left: '', right: '130px'},
+                overlayCSS: {backgroundColor: '#000', opacity: 0.0},
+                message: $('#ajax-indicator'),
+                fadeIn: 0,
+                fadeOut: 0,
+                baseZ: 30000
+            });
+        } else
+            oldWicketShow(id);
+    };
+
+    Wicket.hideIncrementally = function (id) {
+        if (id == "ajax-indicator")
+            $.unblockUI();
+        else
+            oldWicketHide(id);
+    };
+</script>
+
+<div>
+    <wicket:child/>
+</div>
+
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script type="text/javascript" src="js/bootstrap.js"></script>
+
+<!-- DateTimePicker -->
+<script src="plugins/datepicker/js/moment-with-locales.min.js"></script>
+<script src="plugins/datepicker/js/bootstrap-datetimepicker.min.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configure class="org.eclipse.jetty.maven.plugin.JettyWebAppContext">
+    <New id="postgreDS" class="org.eclipse.jetty.plus.jndi.Resource">
+        <Arg>jdbc/sampleDS</Arg>
+        <Arg>
+            <New class="org.postgresql.ds.PGPoolingDataSource">
+                <Set name="serverName">
+                    <SystemProperty name="postgre.serverName" default="127.0.0.1"/>
+                </Set>
+                <Set name="user">
+                    <SystemProperty name="postgre.username" default="postgres"/>
+                </Set>
+                <Set name="password">
+                    <SystemProperty name="postgre.password" default="postgres"/>
+                </Set>
+                <Set name="databaseName">
+                    <SystemProperty name="postgre.databaseName" default="ElarTest"/>
+                </Set>
+                <Set name="portNumber">
+                    <SystemProperty name="postgre.portNumber" default="5432"/>
+                </Set>
+                <Set name="dataSourceName">
+                    <SystemProperty name="postgre.dataSourceName" default="samplePoolDs"/>
+                </Set>
+                <Set name="maxConnections">
+                    <SystemProperty name="postgre.maxConnections" default="30"/>
+                </Set>
+            </New>
+        </Arg>
+    </New>
+</Configure>

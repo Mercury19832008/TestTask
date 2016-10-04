@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+	<entry key="user.nullValid">Выберите врача</entry>
+	<entry key="password">Пароль</entry>
+	<entry key="login">Вход</entry>
+	<entry key="username">Пользователь</entry>
+	<entry key="all">Все</entry>
+	<entry key="account.locked">Учётная запись заблокирована</entry>
+	<entry key="rememberMe">Запомнить меня</entry>
+	<entry key="authorize">Авторизоваться</entry>
+	<entry key="signIn">Вход</entry>
+</properties>
